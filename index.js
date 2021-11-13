@@ -1,8 +1,12 @@
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+
 const express = require('express')
 const axios = require('axios').default
 const cheerio = require('cheerio')
 const app = express()
-const port = 3000
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
